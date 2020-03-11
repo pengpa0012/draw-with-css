@@ -1,0 +1,614 @@
+*, *::after, *::before{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	min-height: 100vh;
+}
+
+.draw-cover{
+	min-height: 100vh;
+	width: 100%;
+	border-bottom: solid 5px #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.draw-cover .ball{
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background: #AF3418;
+	position: relative;
+	border: solid 2px #000;
+	overflow: hidden;
+	margin: 0 30px;
+}
+
+.draw-cover .ball .round-line-left{
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	position: absolute;
+	left: -350px;
+	border: solid 2px #000;
+}
+
+
+.draw-cover .ball .round-line-right{
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	position: absolute;
+	right: -350px;
+	border: solid 2px #000;
+}
+
+.draw-cover .ball .straight-line{
+	height: 100%;
+	width: 3px;
+	background: #000;
+	position: absolute;
+	left: 50%;
+}
+
+.draw-cover .hoop{
+	width: 300px;
+	height: 250px;
+	border: solid 20px #AB1313;
+	position: relative;
+	top: -200px;
+	border-radius: 20px;
+}
+
+.draw-cover .hoop .box{
+	width: 130px;
+	height: 130px;
+	border: solid 5px #AB1313;
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.draw-cover .hoop .ring{
+	width: 100px;
+	height: 15px;
+	background: #000;
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 10px;
+}
+
+.draw-cover .hoop .ring .string{
+	position: absolute;
+	bottom: 5px;
+	width: 130px;
+	height: 5px;
+	background: #686767;
+	transform-origin: 0;
+}
+
+.draw-cover .hoop .ring .one{
+	transform: rotate(80deg);
+}
+
+.draw-cover .hoop .ring .two{
+	left: 98px;
+	transform: rotate(100deg);
+}
+
+.draw-cover .hoop .ring .three{
+	bottom: -120px;
+	width: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.draw-cover .hoop .ring .four{
+	bottom: -100px;
+	width: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.draw-cover .hoop .ring .five{
+	bottom: -20px;
+	width: 88px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.draw-cover .hoop .ring .six{
+	bottom: -60px;
+	width: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.draw-cover .hoop .ring .seven{
+	width: 130px;
+	transform: rotate(80deg);
+	left: 15px;
+}
+
+.draw-cover .hoop .ring .eight{
+	width: 130px;
+	transform: rotate(100deg);
+	left: 85px;
+}
+
+.draw-cover .hoop .ring .nine{
+	width: 130px;
+	transform: rotate(90deg);
+	left: 50%;
+}
+
+.draw-cover .hoop .pole{
+	width: 15px;
+	height: 500px;
+	background: #A7A7A7;
+	position: absolute;
+	bottom: -500px;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: -1;
+}
+
+.draw-cover .hoop .pole::before{
+	content: '';
+	width: 100px;
+	height: 20px;
+	background: #A7A7A7;
+	position: absolute;
+	bottom: -1px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 5px;
+}
+
+.draw-cover .fin{
+	width: 480px;
+	height: 400px;
+	border: solid 5px #000;
+	border-top: solid 2px transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background: #fff;
+}
+
+.draw-cover .fin::before{
+	content: '';
+	width: 400px;
+	height: 5px;
+	background: #000;
+	position: absolute;
+	border-radius: 100%;
+	top: 8px;
+}
+
+.draw-cover .fin .ear{
+	width: 80px;
+	height: 80px;
+	border-right: solid #000 5px;
+	border-left: solid #000 5px;
+	border-top: solid #000 5px;
+	background: #fff;
+	border-top-right-radius: 100%;
+	border-top-left-radius: 100%;
+	position: absolute;
+}
+
+.draw-cover .fin .ear-right{
+	left: -5px;
+	top: -70px;
+}
+
+.draw-cover .fin .ear-left{
+	right: -5px;
+	top: -70px;
+}
+
+.draw-cover .fin .face{
+	width: 360px;
+	height: 300px;
+	border-radius: 50%;
+	border: solid 2px #000;
+	border-top-width: 8px;
+	border-left-width: 5;
+	position: relative;
+	background: #FCD5CE;
+}
+
+.draw-cover .fin .face .eye{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #000;
+	position: absolute;
+}
+
+.draw-cover .fin .face .eye::after{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	right: 5px;
+	background: #fff;
+}
+
+.draw-cover .fin .face .right{
+	left: 23%;
+	top: 40%;
+	transform: translate(-23%, -40%);
+}
+
+.draw-cover .fin .face .left{
+	right: 23%;
+	top: 40%;
+	transform: translate(-23%, -40%);
+}
+
+.draw-cover .fin .face .mouth{
+	width: 100px;
+	height: 100px;
+	border: solid 5px #000;
+	border-left: solid 5px transparent;
+	border-top: solid 5px transparent;
+	border-right: solid 5px transparent;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%,-65%);
+	border-radius: 100px;
+}
+
+.draw-cover .coffee{
+	height: 500px;
+	width: 600px;
+	position: relative;
+}
+
+.draw-cover .coffee .smoke-one{
+	width: 20px;
+	height: 100px;
+	background: #321E0D;
+	border-radius: 20px;
+	position: absolute;
+	left: 40%;
+	top: 30%;
+	transform: translate(-40%, -30%);
+	border-right: solid 8px #C16F2C;
+}
+
+.draw-cover .coffee .smoke-two{
+	width: 20px;
+	height: 160px;
+	background: #321E0D;
+	border-radius: 20px;
+	position: absolute;
+	left: 50%;
+	top: 18%;
+	transform: translate(-50%, -18%);
+	border-right: solid 8px #C16F2C;
+}
+
+.draw-cover .coffee .smoke-three{
+	width: 20px;
+	height: 100px;
+	background: #321E0D;
+	border-radius: 20px;
+	position: absolute;
+	left: 60%;
+	top: 30%;
+	transform: translate(-60%, -30%);
+	border-right: solid 8px #C16F2C;
+}
+
+.draw-cover .coffee .circle-of-cup{
+	width: 250px;
+	height: 30px;
+	border: solid 5px #000;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #9D9D9D;
+	overflow: hidden;
+}
+
+.draw-cover .coffee .circle-of-cup .light{
+	width: 250px;
+	height: 30px;
+	background: #854612;
+	border-radius: 50%;
+	position: absolute;
+	top: 5px;
+}
+
+.draw-cover .coffee .circle-of-cup .liquid{
+	width: 250px;
+	height: 30px;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 15px;
+}
+
+.draw-cover .coffee .base{
+	width: 200px;
+	height: 5px;
+	background: #000;
+	position: absolute;
+	transform-origin: 0;	
+}
+
+.draw-cover .coffee .one{
+	top: 50%;
+	left: 180px;
+	transform: translateY(-50%);
+	transform: rotate(80deg);
+}
+
+.draw-cover .coffee .two{
+	top: 50%;
+	right: 180px;
+	transform: translateY(-50%);
+	transform-origin: 100%;	
+	transform: rotate(-80deg);
+}
+
+.draw-cover .coffee .base-line{
+	width: 174px;
+    height: 5px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    bottom: 47px;
+    transform: translateX(-50%);
+}    
+
+.draw-cover .coffee .handle-one{
+	width: 70px;
+    height: 83px;
+    border: solid #000 5px;
+    border-radius: 100%;
+    border-left: solid 2px transparent;
+    position: absolute;
+    left: 66%;
+    top: 60%;
+    transform: rotate(9deg);
+}
+
+.draw-cover .coffee .handle-two{
+	width: 55px;
+    height: 55px;
+    border: solid #000 5px;
+    border-radius: 100%;
+    border-left: solid 2px transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.draw-cover .coffee .plate{
+	width: 400px;
+	height: 10px;
+	border: solid #000 4px;
+	border-bottom-left-radius: 100%;
+	border-bottom-right-radius: 100%;
+	position: absolute;
+	left: 50%;
+    bottom: 38px;
+    transform: translateX(-50%);
+}
+
+.draw-cover .coffee .plate .base-plate{
+	position: absolute;
+	width: 50%;
+	height: 10px;
+	background: #000;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -10px;
+	border-bottom-right-radius: 100%;
+	border-bottom-left-radius: 100%;
+}
+
+.draw-cover .dota-logo{
+	width: 550px; 
+	height: 500px;
+	border: solid #000 5px;  
+	background: -webkit-linear-gradient(#6E0000, #A71F24);
+	position: relative;
+}
+
+.draw-cover .dota-logo .line-one{
+	width: 250px;
+	height: 50px;
+	border: solid #000 2px;
+	position: absolute;
+	top: 120px;
+	right: 30px;
+	transform: rotate(45deg);
+	border-right: none;
+	border-left: none;
+	background: #1A1A1A;
+}
+
+.draw-cover .dota-logo .line-one::before{
+	content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: solid #000 2px;
+    transform: rotate(45deg);
+    left: -18px;
+    top: 5px;
+    border-right: none;
+    border-top: none;
+    background: #1A1A1A;
+}
+
+.draw-cover .dota-logo .line-one::after{
+	content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: solid #000 2px;
+    transform: rotate(45deg);
+    right: -18px;
+    top: 5px;
+    border-left: none;
+    border-bottom: none;
+    background: #1A1A1A;
+}
+
+
+.draw-cover .dota-logo .line-two{
+	width: 458px;
+    height: 81px;
+    border: solid #000 2px;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    transform: rotate(45deg);
+    border-right: none;
+	border-left: none;
+	background: #1A1A1A;
+}
+
+.draw-cover .dota-logo .line-two::before{
+	content: '';
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    border: solid #000 2px;
+    transform: rotate(45deg);
+    left: -28px;
+    top: 9px;
+    border-right: none;
+    border-top: none;
+    background: #1A1A1A;
+}
+
+.draw-cover .dota-logo .line-two::after{
+	content: '';
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    border: solid #000 2px;
+    transform: rotate(45deg);
+    right: -28px;
+    bottom: 9px;
+    border-left: none;
+    border-bottom: none;
+    background: #1A1A1A;
+}
+
+.draw-cover .dota-logo .line-three{
+	width: 250px;
+	height: 50px;
+	border: solid #000 2px;
+	position: absolute;
+	bottom: 120px;
+	left: 30px;
+	transform: rotate(45deg);
+	border-right: none;
+	border-left: none;
+	background: #1A1A1A;
+}
+
+.draw-cover .dota-logo .line-three::before{
+	content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: solid #000 2px;
+    transform: rotate(45deg);
+    left: -18px;
+    top: 5px;
+    border-right: none;
+    border-top: none;
+    background: #1A1A1A;
+}
+
+.draw-cover .dota-logo .line-three::after{
+	content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: solid #000 2px;
+    transform: rotate(45deg);
+    right: -18px;
+    top: 5px;
+    border-left: none;
+    border-bottom: none;
+    background: #1A1A1A;
+}
+
+.draw-cover .medal{
+	width: 250px;
+	height: 250px;
+	border: solid #000 15px;
+	border-radius: 50%;
+	background: #F2D12C;
+	position: relative;
+}
+
+.draw-cover .medal .circle{
+	width: 170px;
+	height: 170px;
+	border: solid #000 15px;
+	background: #FD9011;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.draw-cover .medal .ribbon{
+	border: solid 15px #000;
+	transform-origin: 0;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+	background: #FF4D4D;
+}
+
+.draw-cover .medal .one{
+	height: 200px;
+	width: 80px;
+	position: absolute;
+	top: -180px;
+	transform: rotate(-20deg);
+}
+
+
+.draw-cover .medal .two{
+	height: 200px;
+	width: 80px;
+	position: absolute;
+	top: -208px;
+	right: 0;
+	transform-origin: 0;
+	transform: rotate(20deg);
+}
+
+.draw-cover .medal .three{
+	height: 80px;
+	width: 200px;
+	position: absolute;
+	top: -190px;
+	z-index: -1;
+	background: #AD2C2C;
+}
