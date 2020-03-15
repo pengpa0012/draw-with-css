@@ -11,15 +11,32 @@ body{
 .draw-cover{
 	min-height: 100vh;
 	width: 100%;
-	border-bottom: solid 5px #000;
 	display: flex;
+	margin: auto;
 	align-items: center;
 	justify-content: center;
 }
 
-.draw-cover .ball{
+.draw-cover:nth-child(odd){
+	background: -webkit-linear-gradient(right, #F5C02D, #F5802D, #F53D2D);
+}
+
+.draw-cover:nth-child(even){
+	background: -webkit-linear-gradient(right, #49C8E1, #497CE1, #4958E1);
+}
+
+.draw-cover .ball-cover, .fin-cover, .coffee-cover, .dota-logo-cover, .medal-cover{
 	width: 500px;
-	height: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.draw-cover .ball{
+	width: 50%;
+	height: 50%;
 	border-radius: 50%;
 	background: #AF3418;
 	position: relative;
@@ -29,22 +46,22 @@ body{
 }
 
 .draw-cover .ball .round-line-left{
-	width: 500px;
-	height: 500px;
-	border-radius: 50%;
-	position: absolute;
-	left: -350px;
-	border: solid 2px #000;
+	width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: -60%;
+    border: solid 2px #000;
 }
 
 
 .draw-cover .ball .round-line-right{
-	width: 500px;
-	height: 500px;
-	border-radius: 50%;
-	position: absolute;
-	right: -350px;
-	border: solid 2px #000;
+	width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    right: -60%;
+    border: solid 2px #000;
 }
 
 .draw-cover .ball .straight-line{
@@ -56,17 +73,18 @@ body{
 }
 
 .draw-cover .hoop{
-	width: 300px;
-	height: 250px;
+	width: 30%;
+	height: 30%;
 	border: solid 20px #AB1313;
 	position: relative;
-	top: -200px;
+	top: -126px;
 	border-radius: 20px;
+	background: #fff;
 }
 
 .draw-cover .hoop .box{
-	width: 130px;
-	height: 130px;
+	width: 50%;
+	height: 50%;
 	border: solid 5px #AB1313;
 	position: absolute;
 	bottom: -5px;
@@ -83,6 +101,7 @@ body{
 	left: 50%;
 	transform: translateX(-50%);
 	border-radius: 10px;
+	z-index: 2;
 }
 
 .draw-cover .hoop .ring .string{
@@ -151,13 +170,12 @@ body{
 
 .draw-cover .hoop .pole{
 	width: 15px;
-	height: 500px;
-	background: #A7A7A7;
-	position: absolute;
-	bottom: -500px;
-	left: 50%;
-	transform: translate(-50%);
-	z-index: -1;
+    height: 320px;
+    background: #A7A7A7;
+    position: absolute;
+    bottom: -320px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .draw-cover .hoop .pole::before{
@@ -170,28 +188,29 @@ body{
 	left: 50%;
 	transform: translateX(-50%);
 	border-radius: 5px;
+	border-bottom: solid 2px #000;
 }
 
 .draw-cover .fin{
-	width: 480px;
-	height: 400px;
-	border: solid 5px #000;
-	border-top: solid 2px transparent;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	background: #fff;
+	width: 80%;
+    height: 70%;
+    border: solid 5px #000;
+    border-top: solid 2px transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #fff;
 }
 
 .draw-cover .fin::before{
 	content: '';
-	width: 400px;
+	width: 100%;
 	height: 5px;
 	background: #000;
 	position: absolute;
 	border-radius: 100%;
-	top: 8px;
+	top: -3px;
 }
 
 .draw-cover .fin .ear{
@@ -208,23 +227,23 @@ body{
 
 .draw-cover .fin .ear-right{
 	left: -5px;
-	top: -70px;
+	top: -71px;
 }
 
 .draw-cover .fin .ear-left{
 	right: -5px;
-	top: -70px;
+	top: -71px;
 }
 
 .draw-cover .fin .face{
-	width: 360px;
-	height: 300px;
-	border-radius: 50%;
-	border: solid 2px #000;
-	border-top-width: 8px;
-	border-left-width: 5;
-	position: relative;
-	background: #FCD5CE;
+	width: 80%;
+    height: 75%;
+    border-radius: 50%;
+    border: solid 2px #000;
+    border-top-width: 8px;
+    border-left-width: 5px;
+    position: relative;
+    background: #FCD5CE;
 }
 
 .draw-cover .fin .face .eye{
@@ -272,58 +291,57 @@ body{
 }
 
 .draw-cover .coffee{
-	height: 500px;
-	width: 600px;
+	height: 100%;
+	width: 100%;
 	position: relative;
 }
 
 .draw-cover .coffee .smoke-one{
 	width: 20px;
-	height: 100px;
-	background: #321E0D;
-	border-radius: 20px;
-	position: absolute;
-	left: 40%;
-	top: 30%;
-	transform: translate(-40%, -30%);
-	border-right: solid 8px #C16F2C;
+    height: 100px;
+    background: #321E0D;
+    border-radius: 20px;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    transform: translate(-40%, -30%);
+    border-right: solid 8px #C16F2C;
 }
 
 .draw-cover .coffee .smoke-two{
 	width: 20px;
-	height: 160px;
-	background: #321E0D;
-	border-radius: 20px;
-	position: absolute;
-	left: 50%;
-	top: 18%;
-	transform: translate(-50%, -18%);
-	border-right: solid 8px #C16F2C;
+    height: 160px;
+    background: #321E0D;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 13%;
+    transform: translate(-50%, -18%);
+    border-right: solid 8px #C16F2C;
 }
 
 .draw-cover .coffee .smoke-three{
 	width: 20px;
-	height: 100px;
-	background: #321E0D;
-	border-radius: 20px;
-	position: absolute;
-	left: 60%;
-	top: 30%;
-	transform: translate(-60%, -30%);
-	border-right: solid 8px #C16F2C;
+    height: 100px;
+    background: #321E0D;
+    border-radius: 20px;
+    position: absolute;
+    left: 60%;
+    top: 25%;
+    transform: translate(-60%, -30%);
+    border-right: solid 8px #C16F2C;
 }
 
 .draw-cover .coffee .circle-of-cup{
 	width: 250px;
-	height: 30px;
-	border: solid 5px #000;
-	border-radius: 50%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: #9D9D9D;
-	overflow: hidden;
+    height: 30px;
+    border: solid 5px #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
 }
 
 .draw-cover .coffee .circle-of-cup .light{
@@ -338,7 +356,6 @@ body{
 .draw-cover .coffee .circle-of-cup .liquid{
 	width: 250px;
 	height: 30px;
-	background: #fff;
 	border-radius: 50%;
 	position: absolute;
 	top: 15px;
@@ -354,21 +371,19 @@ body{
 
 .draw-cover .coffee .one{
 	top: 50%;
-	left: 180px;
-	transform: translateY(-50%);
-	transform: rotate(80deg);
+    left: 25%;
+    transform: rotate(80deg);
 }
 
 .draw-cover .coffee .two{
 	top: 50%;
-	right: 180px;
-	transform: translateY(-50%);
-	transform-origin: 100%;	
-	transform: rotate(-80deg);
+    right: 25%;
+    transform-origin: 100%;
+    transform: rotate(-80deg);
 }
 
 .draw-cover .coffee .base-line{
-	width: 174px;
+	width: 50%;
     height: 5px;
     background: #000;
     position: absolute;
@@ -384,7 +399,7 @@ body{
     border-radius: 100%;
     border-left: solid 2px transparent;
     position: absolute;
-    left: 66%;
+    left: 70%;
     top: 60%;
     transform: rotate(9deg);
 }
@@ -401,7 +416,7 @@ body{
 }
 
 .draw-cover .coffee .plate{
-	width: 400px;
+	width: 80%;
 	height: 10px;
 	border: solid #000 4px;
 	border-bottom-left-radius: 100%;
@@ -425,24 +440,24 @@ body{
 }
 
 .draw-cover .dota-logo{
-	width: 550px; 
-	height: 500px;
-	border: solid #000 5px;  
-	background: -webkit-linear-gradient(#6E0000, #A71F24);
-	position: relative;
+	width: 80%;
+    height: 80%;
+    border: solid #000 5px;
+    background: -webkit-linear-gradient(#6E0000, #A71F24);
+    position: relative;
 }
 
 .draw-cover .dota-logo .line-one{
-	width: 250px;
-	height: 50px;
-	border: solid #000 2px;
-	position: absolute;
-	top: 120px;
-	right: 30px;
-	transform: rotate(45deg);
-	border-right: none;
-	border-left: none;
-	background: #1A1A1A;
+	width: 30%;
+    height: 13%;
+    border: solid #000 2px;
+    position: absolute;
+    top: 100px;
+    right: 43px;
+    transform: rotate(45deg);
+    border-right: none;
+    border-left: none;
+    background: #1A1A1A;
 }
 
 .draw-cover .dota-logo .line-one::before{
@@ -475,16 +490,16 @@ body{
 
 
 .draw-cover .dota-logo .line-two{
-	width: 458px;
-    height: 81px;
+	width: 60%;
+    height: 21%;
     border: solid #000 2px;
     position: absolute;
-    top: 200px;
-    left: 50px;
+    top: 146px;
+    left: 21%;
     transform: rotate(45deg);
     border-right: none;
-	border-left: none;
-	background: #1A1A1A;
+    border-left: none;
+    background: #1A1A1A;
 }
 
 .draw-cover .dota-logo .line-two::before{
@@ -516,16 +531,16 @@ body{
 }
 
 .draw-cover .dota-logo .line-three{
-	width: 250px;
-	height: 50px;
-	border: solid #000 2px;
-	position: absolute;
-	bottom: 120px;
-	left: 30px;
-	transform: rotate(45deg);
-	border-right: none;
-	border-left: none;
-	background: #1A1A1A;
+	width: 30%;
+    height: 13%;
+    border: solid #000 2px;
+    position: absolute;
+    bottom: 100px;
+    left: 43px;
+    transform: rotate(45deg);
+    border-right: none;
+    border-left: none;
+    background: #1A1A1A;
 }
 
 .draw-cover .dota-logo .line-three::before{
@@ -563,6 +578,7 @@ body{
 	border-radius: 50%;
 	background: #F2D12C;
 	position: relative;
+	bottom: -85px;
 }
 
 .draw-cover .medal .circle{
@@ -591,6 +607,7 @@ body{
 	position: absolute;
 	top: -180px;
 	transform: rotate(-20deg);
+	z-index: 2;
 }
 
 
@@ -602,6 +619,7 @@ body{
 	right: 0;
 	transform-origin: 0;
 	transform: rotate(20deg);
+	z-index: 2;
 }
 
 .draw-cover .medal .three{
@@ -609,6 +627,5 @@ body{
 	width: 200px;
 	position: absolute;
 	top: -190px;
-	z-index: -1;
 	background: #AD2C2C;
 }
